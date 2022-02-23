@@ -1,0 +1,5 @@
+%headings-common-rules {
+    line-height: 1.3;
+}
+
+@include responsive-headings($headings);

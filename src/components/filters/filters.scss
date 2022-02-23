@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.filters {
+    position: sticky;
+    top: 86px;
+    padding: 1.3em 0;
+    margin-bottom: 3em;
+    background-color: white;
+    border-bottom: 1px solid $disabled-hawkes-blue;
+    z-index: 3;
+
+    &__inner-wrap {
+        display: flex;
+    }
+}

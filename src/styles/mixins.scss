@@ -1,0 +1,44 @@
+/**
+ * Brakepoints
+ *
+ */
+@mixin respond-to ($brakepoint) {
+    @each $val in $breakpoints {
+        @if nth($val, 1) == $brakepoint {
+            $size: nth($val, 2);
+            @media only screen and (max-width: #{$size}) {
+                @content;
+            }
+        }
+    }
+}
+
+
+/**
+ * Responsive headings
+ *
+ */
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@mixin form-responsive-heading ($heading-level, $min-font-size, $max-font-size, $scaler) {
+    .#{$heading-level}, #{$heading-level} {
+        font-size: clamp( $min-font-size, $scaler, $max-font-size );
+    }
+}
+
+@mixin responsive-headings ($headings) {
+    @each $val in $headings {
+        $scale-rules: nth($val, 2);
+        
+        @include form-responsive-heading(nth($val, 1), 
+                    map-deep-get($scale-rules, 'min-font-size'), 
+                    map-deep-get($scale-rules, 'max-font-size'), 
+                    map-deep-get($scale-rules, 'scaler')
+                );
+    }
+}

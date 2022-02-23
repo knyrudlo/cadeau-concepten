@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+
+.ocuupancy {
+    position: relative;
+
+    &__inner-wrap {
+        padding: 9px 12px 9px 35px;
+        background: #F5F6FD;
+        border-radius: 4px;
+        font-size: 13px;
+        line-height: 17px;
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1em;
+    }
+
+    &__dropdown {
+        $arrow-shift: 1em;
+
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        margin-top: $arrow-shift;
+        padding: 1em;
+        background-color: white;
+        box-shadow: 0 2px 6px rgb(0 0 0 / 5%), 0 0 0 1px rgb(0 0 0 / 7%);
+        border-radius: 3px;
+
+        &>:not(:last-child):not(:only-child) {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__field {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__controll {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 0.5em;
+        border: 1px solid $disabled-periwinkle;
+        text-align: center;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+}

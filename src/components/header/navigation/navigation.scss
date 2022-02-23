@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__item {
+        margin-right: 2.5em;
+    }
+
+    @include respond-to('lg') {
+        &_mobile {
+            flex-direction: column;
+        }
+    }
+}

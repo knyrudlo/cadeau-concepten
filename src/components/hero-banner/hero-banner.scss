@@ -1,0 +1,26 @@
+.hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 26.4em;
+    margin-bottom: 1.3em;
+    color: white;
+
+    &__text {
+        text-align: center;
+    }
+
+    &__sub-heading {
+        line-height: 5em;
+    }
+
+    &__heading {
+        letter-spacing: 2px;
+    }
+
+    &__description {
+        max-width: 41em;
+        font-size: 1.1em;
+        line-height: 2em;
+    }
+}

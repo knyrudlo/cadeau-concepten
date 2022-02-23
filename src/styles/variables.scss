@@ -1,0 +1,83 @@
+/**
+ * Fonts setup
+ *
+ */
+$fonts-path: '../assets/fonts';
+$main-ff: "Boston-Regular", "Helvetica", "Arial", sans-serif;
+
+
+/**
+ * Typography setup
+ *
+ */
+$headings: (
+    ('h1', 
+        ( 'max-font-size': 60px, 
+          'min-font-size': 30px,
+          'scaler': 5vw
+        )
+    ),
+    ('h2', 
+        ( 'max-font-size': 50px, 
+          'min-font-size': 25px,
+          'scaler': 4vw
+        )
+    ),
+    ('h3', 
+        ( 'max-font-size': 30px, 
+          'min-font-size': 20px,
+          'scaler': 3vw
+        )
+    ),
+    ('h4', 
+        ( 'max-font-size': 22px, 
+          'min-font-size': 18px,
+          'scaler': 3vw
+        )
+    ),
+    ('h5', 
+        ( 'max-font-size': 17px, 
+          'min-font-size': 15px,
+          'scaler': 1vw
+        )
+    ),
+) !default;
+
+
+/**
+ * Colors setup
+ *
+ */
+// Firm site color
+$main-site-lavender: #E160E4;
+$main-site-lavender-light: #EF94F1;
+$main-site-persian-blue: #1F35D4;
+$main-site-persian-blue-light: #4358F4;
+
+//service colors
+$disabled-hawkes-blue: #E5E8FE;
+$disabled-periwinkle: #C3C8E9;
+
+// Text site color's
+$text-gray: #1C1C1C;
+$text-light-grey: lighten($text-gray, 49.85%);;
+
+
+/**
+ * Wrapper setup
+ *
+ */
+$site-width: 1180px;
+$site-min-width: 320px;
+
+
+/**
+ * Break point namespace object
+ *
+ */
+$breakpoints: (
+    ('sm', 768px),
+    ('md', 992px),
+    ('lg', $site-width)
+) !default;
+  

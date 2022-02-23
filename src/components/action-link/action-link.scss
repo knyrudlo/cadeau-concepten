@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+
+.action-link {
+    $self: &;
+
+    position: relative;
+    padding: 1em 1.2em;
+
+    border-radius: 4px;
+    text-decoration: none;
+    line-height: 1.26;
+    color: #fff;
+    overflow: hidden;
+
+    // &:not(#{$self}_disabled) {
+        background-color: $main-site-persian-blue;
+
+        &:hover {
+            background-color: $main-site-persian-blue-light;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate3d(-50%, -50%, 0);
+            transform-style: flat;
+            width: 0;
+            height: 0;
+            background: rgba(white, .2);
+            border-radius: 50%;
+            transition: width .3s ease, height .3s ease;
+        }
+
+        &:active {
+            background-color: $main-site-persian-blue;
+    
+            &:before {
+                width: 300px;
+                height: 300px;
+            }
+    
+            #{$self}_book-hotel {
+                background-color: $main-site-lavender;
+            }
+        }
+    // }
+
+    &_book-hotel {
+        background-color: $main-site-lavender;
+
+        &:hover {
+            background-color: $main-site-lavender-light;
+        }
+    }
+
+    // &_disabled {
+    //     cursor: default;
+    //     background-color: $disabled-hawkes-blue;
+    //     color: $disabled-periwinkle;
+    // }
+}
