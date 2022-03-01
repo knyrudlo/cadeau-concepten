@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import "./burger.scss"
-
+import "./burger.scss";
 
 const Burger = ({ open, setOpen }) => {
   const StyledBurger = styled.div`
@@ -23,11 +22,7 @@ const Burger = ({ open, setOpen }) => {
     }
   `;
   return (
-    <StyledBurger
-      className="burger"
-      open={open}
-      onClick={() => setOpen(!open)}
-    >
+    <StyledBurger className="burger" open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />

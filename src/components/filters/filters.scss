@@ -1,15 +1,26 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .filters {
-    position: sticky;
-    top: 86px;
-    padding: 1.3em 0;
-    margin-bottom: 3em;
-    background-color: white;
-    border-bottom: 1px solid $disabled-hawkes-blue;
-    z-index: 3;
+  position: sticky;
+  top: 91px;
+  padding: 1.3em 0;
+  margin-bottom: 3em;
+  background-color: white;
+  border-bottom: 1px solid $disabled-hawkes-blue;
+  z-index: 4;
 
+  &__inner-wrap {
+    display: flex;
+  }
+
+  @include respond-to("lg") {
+    top: 80px;
+  }
+
+  @include respond-to("md") {
     &__inner-wrap {
-        display: flex;
+      flex-direction: column;
     }
+  }
 }

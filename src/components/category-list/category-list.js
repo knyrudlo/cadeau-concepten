@@ -6,20 +6,25 @@ import "./category-list.scss";
 
 const CategoryList = (props) => {
   const { category, items } = props;
-  
+
   return (
     <section className="category-list">
-      <div className="category-list__inner-wrap wrapper">
+      <div className="category-list__inner-wrap wrapper row">
         {items.map((props) => (
-          <CategoryListItem key={props.id} props={props} category={category} />
+          <CategoryListItem key={props.id} category={category} {...props} />
         ))}
       </div>
     </section>
   );
 };
-const CategoryListItem = ({ props, category }) => {
-  const { image, title, rating, description, startPrice } = props;
-
+const CategoryListItem = ({
+  image,
+  title,
+  rating,
+  description,
+  startPrice,
+  category,
+}) => {
   return (
     <a href="/" className="list-item">
       <div className="list-item__image-wrap">
@@ -28,6 +33,8 @@ const CategoryListItem = ({ props, category }) => {
           alt=""
           className="list-item__image"
         />
+        <div className="list-item__image-hover"></div>
+        <div className="list-item__image-hover"></div>
       </div>
       <div className="list-item__category">{category}</div>
       <h4 className="list-item__heading">{title}</h4>

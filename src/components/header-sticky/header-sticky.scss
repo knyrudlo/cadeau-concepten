@@ -1,0 +1,70 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+  $self: &;
+
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.7em 0 1em;
+  border-bottom: 1px solid transparent;
+  z-index: 4;
+  transition: all 0.3s;
+
+  @include respond-to("md") {
+    background-color: white;
+  }
+
+  &__inner-wrap {
+    display: flex;
+  }
+
+  &__mobile-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include respond-to("md") {
+      display: none;
+    }
+  }
+
+  &_sticky {
+    background-color: white;
+    top: 0px;
+    border-bottom: 1px solid gainsboro;
+    z-index: 9;
+  }
+
+  &_open-nav {
+    #{$self}__mobile-wrap {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: calc(100vh - 84px);
+      background-color: white;
+    }
+  }
+
+  .action-link {
+    margin-right: 1.3em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include respond-to("md") {
+      margin-right: 0;
+      width: 100%;
+      text-align: center;
+      border-radius: inherit;
+    }
+  }
+}

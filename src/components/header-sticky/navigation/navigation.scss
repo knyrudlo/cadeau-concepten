@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__item {
+    margin-right: 2.5em;
+    text-decoration: none;
+    color: #161616;
+  }
+
+  @include respond-to("md") {
+    width: 100%;
+    flex-direction: column;
+
+    &__item {
+      width: 100%;
+      padding: 1em 1.2em;
+      margin-right: 0;
+      border-top: 1px solid gainsboro;
+      text-align: center;
+    }
+  }
+}
